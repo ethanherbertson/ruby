@@ -11,7 +11,7 @@ class DequeTest < Minitest::Test
   end
 
   def test_push_shift
-    skip
+    # skip
     deque = Deque.new
     deque.push(10)
     deque.push(20)
@@ -20,7 +20,7 @@ class DequeTest < Minitest::Test
   end
 
   def test_unshift_shift
-    skip
+    # skip
     deque = Deque.new
     deque.unshift(10)
     deque.unshift(20)
@@ -29,7 +29,7 @@ class DequeTest < Minitest::Test
   end
 
   def test_unshift_pop
-    skip
+    # skip
     deque = Deque.new
     deque.unshift(10)
     deque.unshift(20)
@@ -38,7 +38,7 @@ class DequeTest < Minitest::Test
   end
 
   def test_example
-    skip
+    # skip
     deque = Deque.new
     deque.push(10)
     deque.push(20)
@@ -66,5 +66,25 @@ class DequeTest < Minitest::Test
     assert_equal 10, deque.shift
     deque.unshift(20)
     assert_equal 20, deque.pop
+  end
+
+  def test_sort
+    deque = Deque.new
+    deque.push(1)
+    deque.push(5)
+    deque.push(3)
+    deque.push(5)
+
+    assert_equal [1,3,5,5], deque.sort
+  end
+
+  def test_any?
+    deque = Deque.new
+    deque.push(1)
+    deque.push(5)
+    deque.push(3)
+    refute deque.any? {|n| n.even?}
+    assert deque.any? {|n| n.odd?}
+    assert deque.any? {|n| n == 1}
   end
 end
