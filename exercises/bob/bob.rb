@@ -1,12 +1,13 @@
 module Bob
   def self.hey(remark)
-    yelled = true if remark == remark.upcase && remark != remark.delete('A-Z')
-    question = true if remark.rstrip.end_with?('?')
+    return 'Fine. Be that way!' if remark.strip.empty?
 
-    return 'Fine. Be that way!' if remark.strip.empty? # nothing said
-    return "Calm down, I know what I'm doing!" if yelled && question
-    return 'Whoa, chill out!' if yelled
-    return 'Sure.' if question
+    is_yelling = (remark == remark.upcase && remark.match(/[a-zA-Z]/))
+    is_question = remark.strip.end_with?('?')
+
+    return 'Calm down, I know what I\'m doing!' if is_yelling && is_question
+    return 'Sure.' if is_question
+    return 'Whoa, chill out!' if is_yelling
 
     'Whatever.'
   end
