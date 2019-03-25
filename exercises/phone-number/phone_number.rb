@@ -4,7 +4,7 @@ module PhoneNumber
     digits = dirty_number.delete('^0-9').chars
 
     # error if it's not one of the expected lengths:
-    return unless (10..11).cover?(digits.length)
+    return unless digits.length.between?(10, 11)
 
     # if it's 11 digits, it better start with a '1' (which we ignore):
     if digits.length == 11
@@ -12,8 +12,8 @@ module PhoneNumber
     end
 
     # neither the area code nor the exchange can start with a 1 or a 0:
-    return unless ('2'..'9').cover?(digits[0])
-    return unless ('2'..'9').cover?(digits[3])
+    return unless digits[0].between?('2', '9')
+    return unless digits[3].between?('2', '9')
 
     digits.join
   end
