@@ -19,4 +19,8 @@ class PerfectNumberTest < Minitest::Test
   def test_classify_abundant
     assert_equal 'abundant', PerfectNumber.classify(12)
   end
+
+  def test_classify_big_perfect
+    assert_equal 'perfect', PerfectNumber.classify(33550336)
+  end
 end
