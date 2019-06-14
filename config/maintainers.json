@@ -13,7 +13,7 @@
     },
     {
       "github_username": "bernardoamc",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": null,
       "link_text": null,
@@ -23,7 +23,7 @@
     },
     {
       "github_username": "tommyschaefer",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": null,
       "link_text": null,
@@ -43,7 +43,7 @@
     },
     {
       "github_username": "bmulvihill",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": null,
       "link_text": null,
@@ -60,6 +60,26 @@
       "link_url": null,
       "avatar_url": null,
       "bio": null
+    },
+    {
+      "github_username": "F3PiX",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Maud de Vries",
+      "link_text": null,
+      "link_url": null,
+      "avatar_url": null,
+      "bio": "Ruby and Rails fan"
+    },
+    {
+      "github_username": "pgaspar",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Pedro Gaspar",
+      "link_text": null,
+      "link_url": null,
+      "avatar_url": "https://s.gravatar.com/avatar/91a8a9c1ec4d91f07d2b18d229c75e3a?s=400",
+      "bio": "Ruby has been my go-to language for the past 6 years. I love how readable and intuitive it is. I'm thankful for the opportunity to help others on their journey in any way I can and I'm hoping to become a better mentor in the process :)"
     }
   ]
 }
