@@ -8,6 +8,9 @@ module Luhn
     # In short, after multiplying each second digit (counting from right) by
     # two, the sum of all THOSE numbers' digits must be divisible by 10.
     #
+    # Equivalently, after doubling every other digit, subtract 9 from any of
+    # them that are greater than nine. Then sum the digits as above.
+    #
     # Here's one way to do it that allows for nice, easy-to-follow comments:
     #
     normalized                                    #         Start with the normalized string : "055444285"
